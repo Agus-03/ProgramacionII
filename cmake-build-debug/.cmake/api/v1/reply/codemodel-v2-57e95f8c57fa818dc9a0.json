@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ProgramacionII::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ProgramacionII-Debug-9c61d16b6831983506c4.json",
+					"jsonFile" : "target-ProgramacionII-Debug-33a8eaa83738e850bda0.json",
 					"name" : "ProgramacionII",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Nico/Desktop/ProgramacionII/cmake-build-debug",
-		"source" : "C:/Users/Nico/Desktop/ProgramacionII"
+		"build" : "C:/Users/usuario/Desktop/ProgramacionII/cmake-build-debug",
+		"source" : "C:/Users/usuario/Desktop/ProgramacionII"
 	},
 	"version" : 
 	{
