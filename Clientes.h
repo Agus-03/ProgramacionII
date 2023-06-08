@@ -6,7 +6,7 @@ using namespace std;
 
 class Cliente{
 private:
-    Tarjeta tarjeta;
+    Tarjetas tarjetas;
     Transacciones transacciones;
     int numeroCliente;
     string nombre;

@@ -6,4 +6,4 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(ProgramacionII
-        Clientes.h)
+        Clientes.h Clientes.cpp Clientes.cpp)
