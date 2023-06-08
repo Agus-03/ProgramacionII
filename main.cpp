@@ -10,8 +10,8 @@ using namespace std;
 int main() {
     vector<Cliente> clientes;
     char option, opEstado, opVarias, opTiempo, opTipo;
-    int numCliente, anioCliente, auxDia, auxMes, auxAnio, _dia, _mes, _anio, _codigoCliente, _monto;
-    string nombre, apellido, tipo, estado;
+    int anioCliente, auxDia, auxMes, auxAnio, _dia, _mes, _anio, _monto;
+    string numCliente, nombre, apellido, tipo, estado;
 
     do {
         cout << "* * * * M E N U * * * *" << endl;
@@ -26,17 +26,17 @@ int main() {
         cin >> option;
 
         switch (option) {
-            case '1':
-                cout << "Ingrese el numero del cliente: ";
+            case '1': //registro
+                cout << "Ingrese el numero del cliente: " << endl;
                 cin >> numCliente;
 
-                cout << "Ingrese el nombre del cliente: ";
+                cout << "Ingrese el nombre del cliente: " << endl;
                 cin >> nombre;
 
-                cout << "Ingrese el apellido del cliente: ";
+                cout << "Ingrese el apellido del cliente: " <<endl;
                 cin >> apellido;
 
-                cout << "Ingrese el anio del cliente: ";
+                cout << "Ingrese el anio del cliente: " << endl;
                 cin >> anioCliente;
 
                 do {
@@ -74,6 +74,71 @@ int main() {
                 } while (opTipo != '4');
 
                 break;
+            case '2': //alta-baja
+                if (clientes.empty()){
+                    cout << "No hay clientes registrados aun" << endl;
+                } else {
+                    cout << "Ingrese el numero del cliente: "<<endl;
+                    cin >> numCliente;
+                    for (int i=0; i<clientes.size(); i++){
+                        if (clientes[i].getNumeroCliente() == numCliente){
+                            if(clientes[i].getEstado().compare("ALTA")==0){
+                                clientes[i].setEstado("BAJA");
+                            } else if(clientes[i].getEstado().compare("BAJA")==0){
+                                clientes[i].setEstado("ALTA");
+                            }
+                            cout<<"Al cliente "<<clientes[i].getNombre()<<" "<<clientes[i].getApellido()<<"se le ha dado de "<<clientes[i].getEstado()<<endl;
+                        }
+                    }
+                }
+                break;
+            case '3': //extraccion
+                if(clientes.empty()){
+                    cout << "No hay clientes registrados aun" << endl;
+                } else {
+                    cout << "Ingrese el numero del cliente: "<<endl;
+                    cin >> numCliente;
+                    for (int i=0; i<clientes.size(); i++){
+                        if(clientes[i].getNumeroCliente().compare(numCliente)){
+                            cout << "ingrese el monto a extraer: " << endl;
+                            cin >> _monto;
+                            cout << "ingrese el dia: " << endl;
+                            cin >> _dia;
+                            cout << "ingrese el mes: " << endl;
+                            cin >> _mes;
+                            cout << "ingrese el anio: " << endl;
+                            cin >> _anio;
+                            clientes[i].realizarExtraccion(_monto, _dia, _mes, _anio);
+                        }
+                    }
+                }
+                break;
+            case '4': //deposito
+                if(clientes.empty()){
+                    cout << "No hay clientes registrados aun" << endl;
+                } else {
+                    cout << "Ingrese el numero del cliente: "<<endl;
+                    cin >> numCliente;
+                    for (int i=0; i<clientes.size(); i++){
+                        if(clientes[i].getNumeroCliente().compare(numCliente)){
+                            cout << "ingrese el monto a depositar: " << endl;
+                            cin >> _monto;
+                            cout << "ingrese el dia: " << endl;
+                            cin >> _dia;
+                            cout << "ingrese el mes: " << endl;
+                            cin >> _mes;
+                            cout << "ingrese el anio: " << endl;
+                            cin >> _anio;
+                            clientes[i].realizarDeposito(_monto, _dia, _mes, _anio);
+                        }
+                    }
+                }
+                break;
+            case '5':
+                cout << "Segundo Menu" << endl;
+                break;
+            default:
+                cout << "Opcion invalida" << endl;
         }
     } while (option != '6');
 

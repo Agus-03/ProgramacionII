@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-Cliente::Cliente(int _numeroCliente, string _nombre, string _apellido, string _tipo, int _anioCliente, string _estado) {
+Cliente::Cliente(string _numeroCliente, string _nombre, string _apellido, string _tipo, int _anioCliente, string _estado) {
     numeroCliente = _numeroCliente;
     nombre = _nombre;
     apellido = _apellido;
@@ -25,7 +25,7 @@ Cliente::Cliente(int _numeroCliente, string _nombre, string _apellido, string _t
 }
 
 
-void Cliente::setNumCliente(int _numCliente){
+void Cliente::setNumCliente(string _numCliente){
     numeroCliente = _numCliente;
 }
 void Cliente::setNombre(string _nombre){
@@ -44,7 +44,7 @@ void Cliente::setEstado(string _estado){
     estado = _estado;
 }
 
-int Cliente::getNumeroCliente(){
+string Cliente::getNumeroCliente(){
     return numeroCliente;
 }
 string Cliente::getNombre(){
