@@ -1,0 +1,25 @@
+# ninja log v5
+108	1942	7079481162840300	CMakeFiles/ProgramacionII.dir/Tarjetas.cpp.obj	66b01664ac7ed383
+47	2054	7079481163962975	CMakeFiles/ProgramacionII.dir/Clientes.cpp.obj	5263ad858693bc0c
+2	2424	7079481167629612	CMakeFiles/ProgramacionII.dir/main.cpp.obj	35b896d99a4dda
+25	1403	7079482954862863	CMakeFiles/ProgramacionII.dir/Clientes.cpp.obj	5263ad858693bc0c
+9	1689	7079482957721579	CMakeFiles/ProgramacionII.dir/main.cpp.obj	35b896d99a4dda
+40	1881	7079482959670529	CMakeFiles/ProgramacionII.dir/Transacciones.cpp.obj	d074b13fc0ac3843
+1883	2280	7079482963547709	ProgramacionII.exe	f85fff932f7d9fe2
+10	1726	7079489646020893	CMakeFiles/ProgramacionII.dir/main.cpp.obj	35b896d99a4dda
+1738	2234	7079489650996232	ProgramacionII.exe	f85fff932f7d9fe2
+9	1880	7079490564837712	CMakeFiles/ProgramacionII.dir/main.cpp.obj	35b896d99a4dda
+1881	2290	7079490568874021	ProgramacionII.exe	f85fff932f7d9fe2
+10	1549	7079491091816126	CMakeFiles/ProgramacionII.dir/main.cpp.obj	35b896d99a4dda
+1550	1908	7079491095286026	ProgramacionII.exe	f85fff932f7d9fe2
+9	1482	7079491699593276	CMakeFiles/ProgramacionII.dir/main.cpp.obj	35b896d99a4dda
+1483	1835	7079491703014673	ProgramacionII.exe	f85fff932f7d9fe2
+9	1301	7079498444411409	CMakeFiles/ProgramacionII.dir/Clientes.cpp.obj	5263ad858693bc0c
+26	1525	7079499532744174	CMakeFiles/ProgramacionII.dir/Clientes.cpp.obj	5263ad858693bc0c
+11	1901	7079500245554755	CMakeFiles/ProgramacionII.dir/Clientes.cpp.obj	5263ad858693bc0c
+30	2316	7079500249698119	CMakeFiles/ProgramacionII.dir/main.cpp.obj	35b896d99a4dda
+2317	2876	7079500254176830	ProgramacionII.exe	f85fff932f7d9fe2
+13	1518	7079501312454647	CMakeFiles/ProgramacionII.dir/main.cpp.obj	35b896d99a4dda
+1520	1872	7079501315888754	ProgramacionII.exe	f85fff932f7d9fe2
+11	1872	7079502655881840	CMakeFiles/ProgramacionII.dir/main.cpp.obj	35b896d99a4dda
+1873	2228	7079502659333749	ProgramacionII.exe	f85fff932f7d9fe2
