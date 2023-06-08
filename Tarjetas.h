@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-class Tarjeta{
+class Tarjetas{
 private:
     int limite;
     string tipo_t;
@@ -15,6 +15,12 @@ public:
 
     void tarjeta_oro();
     void tarjeta_black();
+
+    void setLimite(int);
+    void setTipoT(string);
+
+    int getLimite();
+    int getTipoT();
 };
 
 #endif //PROGRAMACIONII_TARJETAS_H
