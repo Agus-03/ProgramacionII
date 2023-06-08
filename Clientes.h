@@ -8,7 +8,7 @@ using namespace std;
 class Cliente{
 private:
     Transacciones transacciones;
-    int numeroCliente;
+    string numeroCliente;
     string nombre;
     string apellido;
     string tipo;
@@ -17,15 +17,15 @@ private:
 
 public:
     Tarjetas tarjetas;
-    Cliente(int, string, string, string, int, string);
-    void setNumCliente(int);
+    Cliente(string, string, string, string, int, string);
+    void setNumCliente(string);
     void setNombre(string);
     void setApellido(string);
     void setTipo(string);
     void setAnio(int);
     void setEstado(string);
 
-    int getNumeroCliente();
+    string getNumeroCliente();
     string getNombre();
     string getApellido();
     string getTipo();
