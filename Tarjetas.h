@@ -11,7 +11,7 @@ private:
     string tipo_t;
 
 public:
-    Tarjeta();
+    Tarjetas();
 
     void tarjeta_oro();
     void tarjeta_black();
@@ -20,7 +20,7 @@ public:
     void setTipoT(string);
 
     int getLimite();
-    int getTipoT();
+    string getTipoT();
 };
 
 #endif //PROGRAMACIONII_TARJETAS_H

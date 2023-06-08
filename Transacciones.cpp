@@ -10,7 +10,7 @@ Transacciones::Transacciones() {
     dia = 0;
     mes = 0;
     anioTrans = 0;
-    tipoTrans = '';
+    tipoTrans = '\0';
 }
 
 Transacciones::Transacciones(int _numTrans, int _monto, int _dia, int _mes, int _anioTrans, char _tipoTrans) {
