@@ -1,14 +1,8 @@
 #include "Clientes.h"
 #include "Transacciones.h"
-
-Cliente::Cliente() {
-    numeroCliente = 0;
-    nombre = " ";
-    apellido = " ";
-    tipo = " ";
-    anioCliente = 0;
-    estado = " ";
-}
+#include <vector>
+#include <iostream>
+using namespace std;
 
 Cliente::Cliente(int _numeroCliente, string _nombre, string _apellido, string _tipo, int _anioCliente, string _estado) {
     numeroCliente = _numeroCliente;
@@ -17,7 +11,19 @@ Cliente::Cliente(int _numeroCliente, string _nombre, string _apellido, string _t
     tipo = _tipo;
     anioCliente = _anioCliente;
     estado = _estado;
+
+    if (_tipo == "Oro") {
+        tarjetas.tarjeta_oro();
+    }
+
+    if (_tipo == "Black") {
+        tarjetas.tarjeta_black();
+    }
+
+
+
 }
+
 
 void Cliente::setNumCliente(int _numCliente){
     numeroCliente = _numCliente;
@@ -64,3 +70,7 @@ void Cliente::realizarDeposito(int monto, int dia, int mes, int anio) {
 void Cliente::realizarExtraccion(int monto, int dia, int mes, int anio) {
     transacciones.extraccion(monto, dia, mes, anio);
 }
+
+
+
+

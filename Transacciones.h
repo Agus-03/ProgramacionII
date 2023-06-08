@@ -32,7 +32,7 @@ public:
     int getDia();
     int getMes();
     int getAnioTrans();
-    int getTipoTrans();
+    char getTipoTrans();
 };
 
 #endif //PROGRAMACIONII_TRANSACCIONES_H
