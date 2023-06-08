@@ -1,3 +1,3 @@
 # ProgramacionII
 
-###Sistema de Gestion Bancaria
+### Sistema de Gestion Bancaria
