@@ -1,4 +1,5 @@
 #include "Clientes.h"
+#include "Transacciones.h"
 
 Cliente::Cliente() {
     numeroCliente = 0;
@@ -7,6 +8,15 @@ Cliente::Cliente() {
     tipo = " ";
     anioCliente = 0;
     estado = " ";
+}
+
+Cliente::Cliente(int _numeroCliente, string _nombre, string _apellido, string _tipo, int _anioCliente, string _estado) {
+    numeroCliente = _numeroCliente;
+    nombre = _nombre;
+    apellido = _apellido;
+    tipo = _tipo;
+    anioCliente = _anioCliente;
+    estado = _estado;
 }
 
 void Cliente::setNumCliente(int _numCliente){
@@ -46,3 +56,11 @@ int Cliente::getAnioCliente(){
 string Cliente::getEstado(){
     return estado;
 };
+
+void Cliente::realizarDeposito(int monto, int dia, int mes, int anio) {
+    transacciones.deposito(monto, dia, mes, anio);
+}
+
+void Cliente::realizarExtraccion(int monto, int dia, int mes, int anio) {
+    transacciones.extraccion(monto, dia, mes, anio);
+}
