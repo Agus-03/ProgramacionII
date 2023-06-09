@@ -3,15 +3,17 @@
 #include <fstream>
 #include <vector>
 
+#include "Archivos.h"
 #include "Clientes.h"
 
 using namespace std;
 
 int main() {
-    vector<Cliente> clientes;
-    char option, opEstado, opVarias, opTiempo, opTipo;
+    vector<Clientes> clientes;
+    Archivos archivos;
+    char option, opVarias, opTiempo, opTipo;
     int anioCliente, _dia, _mes, _anio, _monto;
-    string numCliente, nombre, apellido, tipo, estado;
+    string numCliente, nombre, apellido, tipo, estado, informeClientes, informeTransacciones;
 
     do {
         cout << "* * * * M E N U * * * *" << endl;
@@ -50,18 +52,18 @@ int main() {
 
                     switch (opTipo) {
                         case '1':
-                            clientes.push_back(Cliente(numCliente, nombre, apellido, "Plata", anioCliente, "ALTA"));
+                            clientes.push_back(Clientes(numCliente, nombre, apellido, "Plata", anioCliente, "ALTA"));
                             break;
 
                         case '2':
-                            clientes.push_back(Cliente(numCliente, nombre, apellido, "Oro", anioCliente, "ALTA"));
+                            clientes.push_back(Clientes(numCliente, nombre, apellido, "Oro", anioCliente, "ALTA"));
                             break;
 
                         case '3':
                             if (2023-anioCliente < 3){
                                 cout<<"No cumple con la antiguedad necesaria"<<endl;
                             } else {
-                                clientes.push_back(Cliente(numCliente, nombre, apellido, "Black", anioCliente, "ALTA"));
+                                clientes.push_back(Clientes(numCliente, nombre, apellido, "Black", anioCliente, "ALTA"));
                             }
                             break;
 
@@ -72,6 +74,8 @@ int main() {
                             cout << "boludo" << endl;
                     } break;
                 } while (opTipo != '4');
+
+                archivos.guardar(informeClientes, clientes);
 
                 break;
             case '2': //alta-baja

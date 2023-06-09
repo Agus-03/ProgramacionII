@@ -4,7 +4,16 @@
 #include <iostream>
 using namespace std;
 
-Cliente::Cliente(string _numeroCliente, string _nombre, string _apellido, string _tipo, int _anioCliente, string _estado) {
+Clientes::Clientes(){
+    numeroCliente = "";
+    nombre = "";
+    apellido = "";
+    tipo = "";
+    anioCliente = 0;
+    estado = "";
+}
+
+Clientes::Clientes(string _numeroCliente, string _nombre, string _apellido, string _tipo, int _anioCliente, string _estado) {
     numeroCliente = _numeroCliente;
     nombre = _nombre;
     apellido = _apellido;
@@ -25,52 +34,55 @@ Cliente::Cliente(string _numeroCliente, string _nombre, string _apellido, string
 }
 
 
-void Cliente::setNumCliente(string _numCliente){
+void Clientes::setNumCliente(string _numCliente){
     numeroCliente = _numCliente;
 }
-void Cliente::setNombre(string _nombre){
+void Clientes::setNombre(string _nombre){
     nombre = _nombre;
 }
-void Cliente::setApellido(string _apellido){
+void Clientes::setApellido(string _apellido){
     apellido = _apellido;
 }
-void Cliente::setTipo(string _tipo){
+void Clientes::setTipo(string _tipo){
     tipo = _tipo;
 }
-void Cliente::setAnio(int _anio){
+void Clientes::setAnio(int _anio){
     anioCliente = _anio;
 }
-void Cliente::setEstado(string _estado){
+void Clientes::setEstado(string _estado){
     estado = _estado;
 }
 
-string Cliente::getNumeroCliente(){
+string Clientes::getNumeroCliente(){
     return numeroCliente;
 }
-string Cliente::getNombre(){
+string Clientes::getNombre(){
     return nombre;
 }
-string Cliente::getApellido(){
+string Clientes::getApellido(){
     return apellido;
 }
-string Cliente::getTipo(){
+string Clientes::getTipo(){
     return tipo;
 }
-int Cliente::getAnioCliente(){
+int Clientes::getAnioCliente(){
     return anioCliente;
 }
-string Cliente::getEstado(){
+string Clientes::getEstado(){
     return estado;
 }
 
-void Cliente::realizarDeposito(int monto, int dia, int mes, int anio) {
+void Clientes::realizarDeposito(int monto, int dia, int mes, int anio) {
     transacciones.deposito(monto, dia, mes, anio);
 }
 
-void Cliente::realizarExtraccion(int monto, int dia, int mes, int anio) {
+void Clientes::realizarExtraccion(int monto, int dia, int mes, int anio) {
     transacciones.extraccion(monto, dia, mes, anio);
 }
 
+string Clientes::obtenerInfo() {
+    return numeroCliente + "; " + nombre + "; " + apellido +"; " + "; " + tipo + "; " + to_string(anioCliente) + "; " + estado;
+}
 
 
 

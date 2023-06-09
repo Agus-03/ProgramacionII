@@ -5,7 +5,7 @@
 #include "Transacciones.h"
 using namespace std;
 
-class Cliente{
+class Clientes{
 private:
     Transacciones transacciones;
     string numeroCliente;
@@ -17,7 +17,8 @@ private:
 
 public:
     Tarjetas tarjetas;
-    Cliente(string, string, string, string, int, string);
+    Clientes();
+    Clientes(string, string, string, string, int, string);
     void setNumCliente(string);
     void setNombre(string);
     void setApellido(string);
@@ -34,5 +35,6 @@ public:
 
     void realizarExtraccion(int, int, int, int);
     void realizarDeposito(int, int, int, int);
+    string obtenerInfo();
 
 };
