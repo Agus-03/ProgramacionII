@@ -3,15 +3,17 @@
 #include <fstream>
 #include <vector>
 
+#include "Archivos.h"
 #include "Clientes.h"
 
 using namespace std;
 
 int main() {
-    vector<Cliente> clientes;
-    char option, opEstado, opVarias, opTiempo, opTipo;
-    int anioCliente, auxDia, auxMes, auxAnio, _dia, _mes, _anio, _monto;
-    string numCliente, nombre, apellido, tipo, estado;
+    vector<Clientes> clientes;
+    Archivos archivos;
+    char option, opVarias, opTiempo, opTipo;
+    int anioCliente, _dia, _mes, _anio, _monto;
+    string numCliente, nombre, apellido, tipo, estado, informeClientes, informeTransacciones;
 
     do {
         cout << "* * * * M E N U * * * *" << endl;
@@ -50,18 +52,18 @@ int main() {
 
                     switch (opTipo) {
                         case '1':
-                            clientes.push_back(Cliente(numCliente, nombre, apellido, "Plata", anioCliente, "ALTA"));
+                            clientes.push_back(Clientes(numCliente, nombre, apellido, "Plata", anioCliente, "ALTA"));
                             break;
 
                         case '2':
-                            clientes.push_back(Cliente(numCliente, nombre, apellido, "Oro", anioCliente, "ALTA"));
+                            clientes.push_back(Clientes(numCliente, nombre, apellido, "Oro", anioCliente, "ALTA"));
                             break;
 
                         case '3':
                             if (2023-anioCliente < 3){
                                 cout<<"No cumple con la antiguedad necesaria"<<endl;
                             } else {
-                                clientes.push_back(Cliente(numCliente, nombre, apellido, "Black", anioCliente, "ALTA"));
+                                clientes.push_back(Clientes(numCliente, nombre, apellido, "Black", anioCliente, "ALTA"));
                             }
                             break;
 
@@ -72,6 +74,8 @@ int main() {
                             cout << "boludo" << endl;
                     } break;
                 } while (opTipo != '4');
+
+                archivos.guardar(informeClientes, clientes);
 
                 break;
             case '2': //alta-baja
@@ -135,7 +139,82 @@ int main() {
                 }
                 break;
             case '5':
-                cout << "Segundo Menu" << endl;
+                do{
+                    cout << "* * * CONSULTAS VARIAS * * *" << endl;
+                    cout<<"1. Cliente por numero"<<endl;
+                    cout<<"2. Todos los Clientes"<<endl;
+                    cout<<"3. Transacciones por Cliente"<<endl;
+                    cout<<"4. Transacciones por periodo de tiempo"<<endl;
+                    cout<<"5. Volver "<<endl;
+                    cout<<"Ingrese una opcion: "<<endl;
+                    cin>>opVarias;
+                    cout<<""<<endl;
+                    switch (opVarias) {
+                        case '1': //cliente por numero
+                            if(clientes.empty()){
+                                cout << "No hay clientes registrados aun" << endl;
+                            } else {
+                                cout << "Ingrese el numero del cliente que busca: " << endl;
+                                cin >> numCliente;
+                                for (int i = 0; i < clientes.size(); i++) {
+                                    if (clientes[i].getNumeroCliente().compare(numCliente)) {
+                                        cout<<"Nombre: "<<clientes[i].getNombre()<<endl;
+                                        cout<<"Apellido: "<<clientes[i].getApellido()<<endl;
+                                        cout<<"Numero de cliente: "<<clientes[i].getNumeroCliente()<<endl;
+                                        cout<<"Tipo de contrato: "<<clientes[i].getTipo()<<endl;
+                                        cout<<"Anio de suscripcion: "<<clientes[i].getAnioCliente()<<endl;
+                                        cout<<"Estado actual: "<<clientes[i].getEstado()<<endl;
+                                        if(clientes[i].getTipo().compare("Plata")){
+                                            cout<<"Tarjeta: No (Plata)"<<endl;
+                                        } else{
+                                            cout<<"Tarjeta: Si"<<endl;
+                                            cout<<"Tipo: "<<clientes[i].tarjetas.getTipoT()<<endl;
+                                            cout<<"Limite: "<<clientes[i].tarjetas.getLimite()<<endl;
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case '2': //lista clientes
+                            if(clientes.empty()){
+                                cout << "No hay clientes registrados aun" << endl;
+                            } else {
+                                for (int i = 0; i < clientes.size(); i++){
+                                    cout<<clientes[i].getNombre()<<" "<<clientes[i].getApellido()<<"; Num. "<<clientes[i].getNumeroCliente()<<"; Tipo: "<<clientes[i].getTipo()<<endl;
+                                }
+                            }
+                            break;
+                        case '3': //transacciones por cliente
+                            if(clientes.empty()){
+                                cout << "No hay clientes registrados aun" << endl;
+                            } else {
+                                for (int i = 0; i < clientes.size(); i++){
+                                    //get from Transacciones.txt
+                                }
+                            }
+                            break;
+                        case '4':
+                            do{
+                                cout<<"Como desea su informe?"<<endl;
+                                cout<<"1. Por semestre"<<endl;
+                                cout<<"2. Por anio"<<endl;
+                                cout<<"3. Volver"<<endl;
+                                cin>>opTiempo;
+
+                                if(clientes.empty()){
+                                    cout << "No hay clientes registrados aun" << endl;
+                                } else {
+                                    for (int i = 0; i < clientes.size(); i++){
+                                        cout<<"Ingrese su fecha de referencia (maxima):"<<endl;
+                                        //get from Transacciones.txt
+                                    }
+                                }
+                            } while (opTiempo != 3);
+                            break;
+                        default:
+                            cout<<"Opcion invalida"<<endl;
+                    }
+                } while (opVarias != 5);
                 break;
             default:
                 cout << "Opcion invalida" << endl;
