@@ -77,6 +77,13 @@ build CMakeFiles/ProgramacionII.dir/Transacciones.cpp.obj: CXX_COMPILER__Program
   OBJECT_DIR = CMakeFiles\ProgramacionII.dir
   OBJECT_FILE_DIR = CMakeFiles\ProgramacionII.dir
 
+build CMakeFiles/ProgramacionII.dir/Archivos.cpp.obj: CXX_COMPILER__ProgramacionII_Debug C$:/Users/usuario/Desktop/ProgramacionII/Archivos.cpp || cmake_object_order_depends_target_ProgramacionII
+  DEP_FILE = CMakeFiles\ProgramacionII.dir\Archivos.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/usuario/Desktop/ProgramacionII/.
+  OBJECT_DIR = CMakeFiles\ProgramacionII.dir
+  OBJECT_FILE_DIR = CMakeFiles\ProgramacionII.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ProgramacionII
@@ -85,7 +92,7 @@ build CMakeFiles/ProgramacionII.dir/Transacciones.cpp.obj: CXX_COMPILER__Program
 #############################################
 # Link the executable ProgramacionII.exe
 
-build ProgramacionII.exe: CXX_EXECUTABLE_LINKER__ProgramacionII_Debug CMakeFiles/ProgramacionII.dir/main.cpp.obj CMakeFiles/ProgramacionII.dir/Clientes.cpp.obj CMakeFiles/ProgramacionII.dir/Tarjetas.cpp.obj CMakeFiles/ProgramacionII.dir/Transacciones.cpp.obj
+build ProgramacionII.exe: CXX_EXECUTABLE_LINKER__ProgramacionII_Debug CMakeFiles/ProgramacionII.dir/main.cpp.obj CMakeFiles/ProgramacionII.dir/Clientes.cpp.obj CMakeFiles/ProgramacionII.dir/Tarjetas.cpp.obj CMakeFiles/ProgramacionII.dir/Transacciones.cpp.obj CMakeFiles/ProgramacionII.dir/Archivos.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ProgramacionII.dir
