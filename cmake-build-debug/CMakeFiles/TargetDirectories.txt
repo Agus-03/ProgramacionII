@@ -1,3 +1,3 @@
-C:/Users/Nico/Desktop/ProgramacionII/cmake-build-debug/CMakeFiles/ProgramacionII.dir
-C:/Users/Nico/Desktop/ProgramacionII/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Nico/Desktop/ProgramacionII/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Mateo/OneDrive/Escritorio/ProgramacionII/cmake-build-debug/CMakeFiles/ProgramacionII.dir
+C:/Users/Mateo/OneDrive/Escritorio/ProgramacionII/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Mateo/OneDrive/Escritorio/ProgramacionII/cmake-build-debug/CMakeFiles/rebuild_cache.dir
