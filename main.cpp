@@ -4,7 +4,6 @@
 #include <vector>
 
 #include "Archivos.h"
-#include "Clientes.h"
 
 using namespace std;
 
@@ -14,6 +13,9 @@ int main() {
     char option, opVarias, opTiempo, opTipo;
     int anioCliente, _dia, _mes, _anio, _monto;
     string numCliente, nombre, apellido, tipo, estado, informeClientes, informeTransacciones;
+
+    archivos.header("informeClientes");
+    archivos.header("informeTransacciones");
 
     do {
         cout << "* * * * M E N U * * * *" << endl;
@@ -75,7 +77,8 @@ int main() {
                     } break;
                 } while (opTipo != '4');
 
-                archivos.guardar(informeClientes, clientes);
+                cout<<"Se ha registrado exitosamente el cliente num. "<<numCliente<<": "<<nombre<<" "<<apellido<<endl;
+                archivos.guardar("informeClientes", clientes);
 
                 break;
             case '2': //alta-baja

@@ -27,8 +27,22 @@ void Archivos::setlinea(vector<string> Linea) {
 void Archivos::guardar(string NombreArchivo, vector<Clientes> clientes) {
     ofstream archivoEscritura(NombreArchivo);
     if(archivoEscritura.is_open()){
-        for (int i = 0; i < texto.size(); i++){
-            archivoEscritura << texto[i]<<endl;
+        for (int i = 0; i < clientes.size(); i++){
+            clientes[i].obtenerInfo();
+        }
+        archivoEscritura.close();
+    } else {
+        cout << "No se pudo abrir el archivo para escritura." << endl;
+    }
+}
+
+void Archivos::header(string NombreArchivo){
+    ofstream archivoEscritura(NombreArchivo, ofstream::app);
+    if(archivoEscritura.is_open()){
+        if(NombreArchivo.compare("informeClientes")){
+            cout<<"Num; Nombre; Apellido; Tipo; Anio; Estado"<<endl;
+        } else if(NombreArchivo.compare("informeTransacciones")){
+            cout<<"Num; Cliente; Monto; Tipo; Dia; Mes; Anio"<<endl;
         }
         archivoEscritura.close();
     } else {
