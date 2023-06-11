@@ -16,6 +16,7 @@ private:
     vector<string> texto;
 public:
     Archivos();
+    Clientes clientes();
 
     string getNombreArchivo();
     vector<string> getTexto();
@@ -28,6 +29,7 @@ public:
     void modificarLinea(string, string, string, string);
     void listaFecha(int,int,int);
     void listaEspecifica(string);
+    void header(string);
 };
 
 #endif //PROGRAMACIONII_ARCHIVOS_H
